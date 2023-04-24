@@ -53,9 +53,9 @@ export default function Lektori() {
 
           <div className="flex flex-col items-center  flex-1 text-center">
             <h1 className="text-6xl font-bold">Lektori</h1>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-6 mt-6">
               {lectures.map((lecture, index) => (
-                <div key={index} className="max-w-sm rounded overflow-hidden shadow-lg">
+                <div key={index} className="max-w-sm rounded-lg overflow-hidden shadow-lg dark:bg-gray-800">
                   <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">
                       {lecture.firstName} {lecture.lastName}
@@ -63,7 +63,7 @@ export default function Lektori() {
                   </div>
                   <div className="px-6 pt-4 pb-2">
                     {lecture.lectures.map((lecture, index) => (
-                      <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                      <span key={index} className="inline-block bg-gray-200 dark:bg-gray-600 dark:text-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                         {lecture}
                       </span>
                     ))}

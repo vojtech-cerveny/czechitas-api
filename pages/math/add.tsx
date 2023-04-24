@@ -42,16 +42,6 @@ const MathAdd = () => {
           </div>
         </div>
       )}
-      {!error && (
-        <div className="p-5">
-          <div
-            className="p-4 mb-4 text-sm text-red-800 rounded-lg"
-            role="alert"
-          >
-            {/* <span className="font-medium">Error!</span> {error} */}
-          </div>
-        </div>
-      )}
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
           <label
@@ -66,7 +56,6 @@ const MathAdd = () => {
             value={a}
             onChange={(e) => setA(e.target.value)}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="a number"
             required
           />
         </div>
@@ -94,7 +83,9 @@ const MathAdd = () => {
           Calculate
         </button>
       </form>
-      <span className="">Result is:<h1 className="text-7xl text-green-800"> {result}</h1></span>
+      <span className="">
+        Result is:<h1 className="text-7xl text-green-800"> {result}</h1>
+      </span>
     </div>
   );
 };

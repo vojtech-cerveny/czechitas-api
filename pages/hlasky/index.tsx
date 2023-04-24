@@ -32,9 +32,9 @@ export default function Lektori() {
             <h1 className="text-6xl font-bold">Hlasky</h1>
             <div className="grid grid-cols-2 gap-6 mt-6">
             {quotes.map((quote) => (
-              <div key={quote.id} className="max-w-sm rounded overflow-hidden shadow-lg border-gray-200 border-2 hover:shadow-2xl duration-300">
+              <div key={quote.id} className="max-w-sm rounded overflow-hidden shadow-lg border-gray-200 dark:border-gray-800 dark:text-gray-100 text-gray-800 border-2 hover:shadow-2xl duration-300">
                 <div className="px-6 py-4">
-                  <p className="text-gray-700 text-base">
+                  <p className="text-base">
                     {quote.quote}
                   </p>
                 </div>
