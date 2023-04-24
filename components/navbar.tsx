@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 max-w-full w-full">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <img
             src="https://automation.cervik.repl.co/images/logo.png"
             className="h-8 mr-3"
@@ -13,7 +13,7 @@ export default function NavBar() {
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Czechitas API page
           </span>
-        </a>
+        </Link>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
