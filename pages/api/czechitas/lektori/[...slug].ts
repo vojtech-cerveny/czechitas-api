@@ -105,7 +105,7 @@ export default async function handler(
       });
     }
     if (!isNaN(Number(slug[0]))) {
-      await new Promise((resolve) => setTimeout(resolve, 10000));
+      await new Promise((resolve) => setTimeout(resolve, Math.random() * 5000));
       return res.status(200).json({ result: lectures[Number(slug[0])] });
     }
     if (slug[0] === "random") {

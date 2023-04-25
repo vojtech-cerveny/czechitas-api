@@ -12,9 +12,10 @@ type Data = {
 
 export type Quote = {
   id: number;
-  quote: string;
+  quote: string
 }
 
+// generate documentation
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -36,9 +37,13 @@ export default async function handler(
       id: getNextId(),
       quote: newLecture.quote,
     };
+
     quotes.push(quote);
 
     // Return the created lecture
     return res.status(201).json({ result: quote });
   }
+
+  // Handle other HTTP methods
+  return res.status(400).json({ error: "Unsupported method" });
 }
