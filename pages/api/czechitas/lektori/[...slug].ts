@@ -9,7 +9,7 @@ export type Lecture = {
   id: number;
   firstName: string;
   lastName: string;
-  lectures: string[]
+  lectures: string[];
 };
 
 const lectures: Lecture[] = [
@@ -82,7 +82,6 @@ const lectures: Lecture[] = [
   },
 ];
 
-
 function getNextId() {
   return Math.max(...lectures.map((lecture) => lecture.id)) + 1;
 }
@@ -101,24 +100,18 @@ export default async function handler(
   // all, random, number, number/quotes, number/lectures, name
   if (slug && slug.length == 1) {
     if (Number(slug[0]) > lectures.length || Number(slug[0]) < 0) {
-      return res
-        .status(400)
-        .json({
-          error: `To si jako myslis, ze tady mame "${slug[0]}" lektoru?! V zadnem pripade!`,
-        });
+      return res.status(400).json({
+        error: `To si jako myslis, ze tady mame "${slug[0]}" lektoru?! V zadnem pripade!`,
+      });
     }
     if (!isNaN(Number(slug[0]))) {
-      await new Promise((resolve) =>
-        setTimeout(resolve, Math.random() * 10000)
-      );
+      await new Promise((resolve) => setTimeout(resolve, 10000));
       return res.status(200).json({ result: lectures[Number(slug[0])] });
     }
     if (slug[0] === "random") {
-      return res
-        .status(200)
-        .json({
-          result: lectures[Math.floor(Math.random() * lectures.length)],
-        });
+      return res.status(200).json({
+        result: lectures[Math.floor(Math.random() * lectures.length)],
+      });
     }
     if (slug[0] === "all") {
       return res.status(200).json({ result: lectures });
