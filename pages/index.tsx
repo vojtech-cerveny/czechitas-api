@@ -67,8 +67,8 @@ export default function Home() {
             <h3 className='text-2xl font-bold mt-6'>Math</h3>
             <ul>
               <li className='mt-4'>
-                <span className='font-mono bg-slate-500 text-white p-1 px-4'><span className='font-bold'>POST</span> api/czechitas/math/add</span>
-                <div className='font-mono bg-slate-500 text-white p-1 px-4 mt-1'><span className='font-bold'>BODY</span> {"{ a: number, b: number }"}</div> 
+                <span className='font-mono bg-slate-500 text-white p-1 px-4'><span className='font-bold'>GET</span> api/math/add</span>
+                <div className='font-mono bg-slate-500 text-white p-1 px-4 mt-1'><span className='font-bold'>PARAMS</span>?a=1&b=2 - jedna se o parametry, koukni na request, ktery se vykona, kdyz zmacknes Calculate!</div> 
                 <div className='font-mono bg-green-200 dark:bg-green-800 dark:text-gray-200  p-1 px-4 mt-1'><span className='font-bold'>Returns</span> {'{ result: number }'}</div>
                 <div className='font-mono bg-red-200 dark:bg-red-800 dark:text-gray-200 p-1 px-4 mt-1'><span className='font-bold'>Returns</span> {'{ error: string }'}</div>
               </li>
